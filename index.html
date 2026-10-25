@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>စပါးစိုက်ပျိုးရေးနှင့် ခြံစီမံခန့်ခွဲမှုစနစ်</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pyidaungsu', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 pb-16">
+
+    <!-- Header -->
+    <header class="bg-emerald-700 text-white p-4 shadow-md sticky top-0 z-50">
+        <h1 class="text-xl font-bold text-center">🌾 စပါးစိုက်ပျိုးရေးနှင့် စီမံခန့်ခွဲမှုစနစ်</h1>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex overflow-x-auto bg-white shadow-sm border-b border-gray-200 sticky top-14 z-40 px-2 py-2 gap-2">
+        <button onclick="switchTab('calendar')" id="btn-calendar" class="tab-btn px-4 py-2 text-sm font-bold rounded-lg bg-emerald-600 text-white whitespace-nowrap">သီးနှံပြက္ခဒိန်</button>
+        <button onclick="switchTab('management')" id="btn-management" class="tab-btn px-4 py-2 text-sm font-bold rounded-lg bg-gray-100 text-gray-700 whitespace-nowrap">လယ်ယာစီမံခန့်ခွဲမှု</button>
+        <button onclick="switchTab('bund')" id="btn-bund" class="tab-btn px-4 py-2 text-sm font-bold rounded-lg bg-gray-100 text-gray-700 whitespace-nowrap">ကန်သင်းပြုပြင်ခြင်း</button>
+        <button onclick="switchTab('finance')" id="btn-finance" class="tab-btn px-4 py-2 text-sm font-bold rounded-lg bg-gray-100 text-gray-700 whitespace-nowrap">စရိတ်နှင့် အမြတ်/အရှုံး</button>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="p-4 max-w-xl mx-auto">
+
+        <!-- 1. သီးနှံပြက္ခဒိန်နှင့် ကြီးထွားမှုဖြစ်စဉ် Tab -->
+        <section id="tab-calendar" class="tab-content space-y-4">
+            <h2 class="text-lg font-bold text-emerald-800 border-b pb-1">📅 စပါးပင်၏ ကြီးထွားမှုဖြစ်စဉ်နှင့် ပြက္ခဒိန်</h2>
+            
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-emerald-500 space-y-2">
+                <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold">အဆင့် ၁ (ရက်ပေါင်း ၁ - ၃၀)</span>
+                <h3 class="font-bold text-base">မျိုးစေ့ကြဲခြင်း၊ ပျိုးထောင်ခြင်းနှင့် မြေပြင်ခြင်း</h3>
+                <p class="text-sm text-gray-600">မြေကို ထွန်စက်ဖြင့် ထွန်ယက်ရေသွင်းပြီး မြေညှိပါ။ ပျိုးထောင်ခင်းတွင် မျိုးစေ့နှုန်းထားမှန်ကန်စွာ ကြဲခင်းပြုလုပ်ပါ။ ပျိုးပင်သက်တမ်း ၂၀-၂၅ ရက်သားတွင် ကောက်စိုက်ရန် အသင့်ဖြစ်ပါမည်။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-emerald-500 space-y-2">
+                <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold">အဆင့် ၂ (ရက်ပေါင်း ၃၁ - ၆၀)</span>
+                <h3 class="font-bold text-base">ကောက်စိုက်ခြင်းနှင့် ပင်ပွားထွက်ချိန်</h3>
+                <p class="text-sm text-gray-600">ကောက်စိုက်ပြီး ၁၀-၁၅ ရက်အကြာ ပေါင်းလိုက်ခြင်းနှင့် ပထမအကြိမ် ယူရီးယား/ပုလဲနှင့် NPK မြေသြဇာ ကျွေးရန်အကောင်းဆုံးအချိန်ဖြစ်ပါသည်။ ပင်ပွားများ ကောင်းစွာထွက်ရှိရန် ရေအသင့်အတင့် ထိန်းပါ။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-emerald-500 space-y-2">
+                <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold">အဆင့် ၃ (ရက်ပေါင်း ၆၁ - ၉၀)</span>
+                <h3 class="font-bold text-base">ဖူးပွင့်ချိန်နှင့် ပန်းပွင့်ချိန်</h3>
+                <p class="text-sm text-gray-600">ဤအဆင့်တွင် စပါးပင်အတွက် ရေအလွန်အမင်း လိုအပ်ပါသည်။ ပိုးမွှားရောဂါ (ခရု၊ ပင်စည်ထိုးပိုး) ကာကွယ်ရေး ဆေးဖျန်းရန်နှင့် ဒုတိယအကြိမ် မြေသြဇာကျွေးရန် လိုအပ်ပါသည်။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-emerald-500 space-y-2">
+                <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold">အဆင့် ၄ (ရက်ပေါင်း ၉၁ - ၁၂၀+)</span>
+                <h3 class="font-bold text-base">စပါးစေ့တင်းချိန်နှင့် ရိတ်သိမ်းချိန်</h3>
+                <p class="text-sm text-gray-600">စပါးစေ့များ အဝါရောင်ပြောင်းပြီး တင်းလာချိန်တွင် လယ်ကွက်ထဲမှ ရေထုတ်ပေးပါ။ စပါးစေ့ အစိုဓာတ် ၂၀-၂၂% ခန့်တွင် အချိန်မီ ရိတ်သိမ်းခြွေလှေ့ပါ။</p>
+            </div>
+        </section>
+
+        <!-- 2. လယ်ယာစီမံခန့်ခွဲမှုစနစ် Tab -->
+        <section id="tab-management" class="tab-content hidden space-y-4">
+            <h2 class="text-lg font-bold text-emerald-800 border-b pb-1">🚜 လယ်ယာစီမံခန့်ခွဲမှုစနစ်</h2>
+            
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">💧 ရေပေးသွင်းမှုနှင့် ရေထုတ်မှု စီမံခန့်ခွဲခြင်း</h3>
+                <p class="text-sm text-gray-600">မိုးစပါးစိုက်ပျိုးရာတွင် မိုးရေကို အဓိကထားသော်လည်း မိုးခေါင်သည့်ကာလများတွင် ရေလှောင်ကန် သို့မဟုတ် စက်ရေတွင်း/ရေခရု (Centrifugal pump) ဖြင့် လိုအပ်သလို ရေသွင်းပေးပါ။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">🧪 မြေသြဇာနှင့် ပိုးသတ်ဆေး အချိန်ဇယား</h3>
+                <ul class="text-sm text-gray-600 space-y-1 list-disc list-inside">
+                    <li>ခံရင်းမြေသြဇာ (စိုက်ခါနီး): NPK ၁၅:၁၅:၁၅ ကျွေးပါ။</li>
+                    <li>ပင်ပွားထွက်ချိန်: ယူရီးယား (ပုလဲ) မြေသြဇာ ပထမအကြိမ်။</li>
+                    <li>ဖူးပွင့်ချိန်: ယူရီးယား သို့မဟုတ် ပိုတက်ရှ် မြေသြဇာ ဒုတိယအကြိမ်။</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">⚙️ လယ်ယာစက်ကိရိယာ ထိန်းသိမ်းမှု</h3>
+                <p class="text-sm text-gray-600">ထွန်စက် (Dongfeng), ဒီဇယ်စက် (AMEC 25HP) နှင့် ရေစုပ်စက်များကို လုပ်ငန်းမစမီ ဆီစစ်၊ လေစစ်နှင့် ကာဘရိုက်တာတို့ကို စစ်ဆေးပြီးမှ အသုံးပြုပါ။</p>
+            </div>
+        </section>
+
+        <!-- 3. လယ်ကန်သင်းပြုပြင်ခြင်း Tab -->
+        <section id="tab-bund" class="tab-content hidden space-y-4">
+            <h2 class="text-lg font-bold text-emerald-800 border-b pb-1">🧱 လယ်ကန်သင်းပြုပြင်ခြင်း နည်းလမ်းများ</h2>
+            
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">၁။ ကန်သင်းကျောက်ထူခြင်းနှင့် မြေသားသိပ်သည်းစေခြင်း</h3>
+                <p class="text-sm text-gray-600">မိုးတွင်းရေမယိုစိမ့်စေရန် ကန်သင်းရိုးဟောင်းများကို တူးဖော်ကာ မြေဆီလွှာကောင်းများဖြင့် အလွှာလိုက် ထပ်မံဖို့ပေးပါ။ ရေစိုခံစေရန် တူ သို့မဟုတ် ဖိသိပ်ကိရိယာဖြင့် ကျစ်လစ်အောင် ဖိသိပ်ပါ။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">၂။ ကဏန်းပေါက်နှင့် ကြွက်ပေါက်များ ပိတ်ခြင်း</h3>
+                <p class="text-sm text-gray-600">လယ်ကန်သင်းပေါ်ရှိ ကဏန်းပေါက်၊ ကြွက်ပေါက်များမှတစ်ဆင့် ရေယိုစိမ့်မှု မဖြစ်ပေါ်စေရန် ရွှံ့စေးသန့်စေးဖြင့် သေချာစွာ ဖောက်ထွင်းပိတ်ဆို့ပါ။</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-emerald-700">၃။ ရေထုတ်ပေါက် (Spillway) စနစ် တပ်ဆင်ခြင်း</h3>
+                <p class="text-sm text-gray-600">မိုးသည်းထန်စွာရွာသွန်းချိန်တွင် ကန်သင်းမပြိုကျစေရန် ရေပိုလွှံထွက်မည့် ပိုက်လိုင်း သို့မဟုတ် ရေထုတ်ပေါက်များကို ကြိုတင်စီစဉ်ပြုလုပ်ထားပါ။</p>
+            </div>
+        </section>
+
+        <!-- 4. ကုန်ကျစရိတ်နှင့် အမြတ်/အရှုံး စာရင်း Tab -->
+        <section id="tab-finance" class="tab-content hidden space-y-4">
+            <h2 class="text-lg font-bold text-emerald-800 border-b pb-1">💰 လယ်ယာကုန်ကျစရိတ်နှင့် ဝင်ငွေမှတ်တမ်း</h2>
+
+            <!-- Summary Cards -->
+            <div class="grid grid-cols-3 gap-2 text-center">
+                <div class="bg-red-50 p-3 rounded-xl border border-red-200">
+                    <p class="text-xs text-red-600 font-bold">စုစုပေါင်းစရိတ်</p>
+                    <p id="total-expense" class="text-sm font-bold text-red-700">0 ကျပ်</p>
+                </div>
+                <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
+                    <p class="text-xs text-emerald-600 font-bold">စုစုပေါင်းဝင်ငွေ</p>
+                    <p id="total-income" class="text-sm font-bold text-emerald-700">0 ကျပ်</p>
+                </div>
+                <div class="bg-blue-50 p-3 rounded-xl border border-blue-200">
+                    <p class="text-xs text-blue-600 font-bold">အမြတ် / အရှုံး</p>
+                    <p id="net-profit" class="text-sm font-bold text-blue-700">0 ကျပ်</p>
+                </div>
+            </div>
+
+            <!-- Add Record Form -->
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-3">
+                <h3 class="font-bold text-sm text-emerald-700">➕ အသစ်ထည့်ရန်</h3>
+                <form id="finance-form" onsubmit="addRecord(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-xs text-gray-600 mb-1">ခေါင်းစဉ် / အကြောင်းအရာ</label>
+                        <input type="text" id="item-desc" required placeholder="ဥပမာ - ယူရီးယားမြေသြဇာ ဝယ်ဈေး" class="w-full text-sm border rounded-lg p-2 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-xs text-gray-600 mb-1">ငွေပမာဏ (ကျပ်)</label>
+                            <input type="number" id="item-amount" required placeholder="0" class="w-full text-sm border rounded-lg p-2 focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-600 mb-1">အမျိုးအစား</label>
+                            <select id="item-type" class="w-full text-sm border rounded-lg p-2 bg-white focus:outline-none focus:border-emerald-500">
+                                <option value="expense">ကုန်ကျစရိတ် (-)</option>
+                                <option value="income">ဝင်ငွေ (+)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-600 text-white font-bold py-2 rounded-lg text-sm hover:bg-emerald-700 transition">မှတ်တမ်းတင်မည်</button>
+                </form>
+            </div>
+
+            <!-- Records List -->
+            <div class="bg-white p-4 rounded-xl shadow-sm space-y-2">
+                <h3 class="font-bold text-sm text-gray-700">📋 မှတ်တမ်းစာရင်းများ</h3>
+                <div id="records-list" class="divide-y divide-gray-100 max-h-60 overflow-y-auto">
+                    <!-- Dynamic items go here -->
+                    <p class="text-xs text-gray-400 text-center py-4">မှတ်တမ်းမရှိသေးပါ။</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript for Interactivity & LocalStorage -->
+    <script>
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-emerald-600', 'text-white');
+                el.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+            activeBtn.classList.add('bg-emerald-600', 'text-white');
+        }
+
+        // Finance & LocalStorage Logic
+        let records = JSON.parse(localStorage.getItem('rice_farm_records')) || [];
+
+        function renderRecords() {
+            const listEl = document.getElementById('records-list');
+            listEl.innerHTML = '';
+
+            let totalExp = 0;
+            let totalInc = 0;
+
+            if (records.length === 0) {
+                listEl.innerHTML = '<p class="text-xs text-gray-400 text-center py-4">မှတ်တမ်းမရှိသေးပါ။</p>';
+            } else {
+                records.forEach((rec, index) => {
+                    if (rec.type === 'expense') totalExp += Number(rec.amount);
+                    else totalInc += Number(rec.amount);
+
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'flex justify-between items-center py-2 text-sm';
+                    itemDiv.innerHTML = `
+                        <div>
+                            <p class="font-bold text-gray-800">${rec.desc}</p>
+                            <span class="text-xs ${rec.type === 'expense' ? 'text-red-500' : 'text-emerald-500'} font-bold">
+                                ${rec.type === 'expense' ? 'ကုန်ကျစရိတ်' : 'ဝင်ငွေ'}
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold ${rec.type === 'expense' ? 'text-red-600' : 'text-emerald-600'}">
+                                ${rec.type === 'expense' ? '-' : '+'}${Number(rec.amount).toLocaleString()} ကျပ်
+                            </span>
+                            <button onclick="deleteRecord(${index})" class="text-gray-400 hover:text-red-500 text-xs font-bold px-1">✕</button>
+                        </div>
+                    `;
+                    listEl.appendChild(itemDiv);
+                });
+            }
+
+            let net = totalInc - totalExp;
+            document.getElementById('total-expense').innerText = totalExp.toLocaleString() + ' ကျပ်';
+            document.getElementById('total-income').innerText = totalInc.toLocaleString() + ' ကျပ်';
+            
+            const netEl = document.getElementById('net-profit');
+            netEl.innerText = net.toLocaleString() + ' ကျပ်';
+            netEl.className = `text-sm font-bold ${net >= 0 ? 'text-emerald-700' : 'text-red-700'}`;
+        }
+
+        function addRecord(e) {
+            e.preventDefault();
+            const desc = document.getElementById('item-desc').value;
+            const amount = document.getElementById('item-amount').value;
+            const type = document.getElementById('item-type').value;
+
+            records.push({ desc, amount, type });
+            localStorage.setItem('rice_farm_records', JSON.stringify(records));
+
+            document.getElementById('finance-form').reset();
+            renderRecords();
+        }
+
+        function deleteRecord(index) {
+            records.splice(index, 1);
+            localStorage.setItem('rice_farm_records', JSON.stringify(records));
+            renderRecords();
+        }
+
+        // Initial render
+        renderRecords();
+    </script>
+</body>
+</html>
